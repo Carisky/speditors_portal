@@ -42,11 +42,10 @@ services:
       PGID: 1000
       TZ: UTC
     volumes:
-      - workbench_config:/config
+      - ./workbench:/config
     ports:
       - "3001:3001"
     depends_on:
       - db
 volumes:
   db_data:
-  workbench_config:

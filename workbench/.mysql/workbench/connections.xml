@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <value type="object" struct-name="db.MySQLConnection">
+    <link type="object" struct-name="db.ConnectionFolder">/</link>
+    <value type="string" key="name">Local DB</value>
+    <value type="string" key="driver">MySQL</value>
+    <value type="string" key="hostIdentifier">db</value>
+    <value type="int" key="port">3306</value>
+    <value type="string" key="userName">root</value>
+    <value type="string" key="schema">app</value>
+  </value>
+</data>
