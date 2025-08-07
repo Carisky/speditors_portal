@@ -10,6 +10,7 @@ services:
     command: npm run dev
     depends_on:
       - back
+
   back:
     build: ./backend
     volumes:
@@ -25,6 +26,7 @@ services:
       DB_PASSWORD: password
     depends_on:
       - db
+
   db:
     image: mysql:8.0
     restart: unless-stopped
@@ -33,19 +35,15 @@ services:
       MYSQL_DATABASE: app
     volumes:
       - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "3306:3306"
-  workbench:
-    image: lscr.io/linuxserver/mysql-workbench:latest
-    environment:
-      PUID: 1000
-      PGID: 1000
-      TZ: UTC
-    volumes:
-      - ./workbench:/config
+
+  dbgate:
+    image: dbgate/dbgate
+    restart: always
     ports:
-      - "3001:3001"
-    depends_on:
-      - db
+      - "8082:3000"
+
 volumes:
   db_data:
