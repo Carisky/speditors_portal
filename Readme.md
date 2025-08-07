@@ -26,3 +26,21 @@ A helper script generates SQL dumps using `mysqldump`.
 ```
 
 Backups are stored in the `backups/` directory with a timestamped filename. This can be automated via cron or other schedulers.
+
+### Database migrations
+
+The backend uses [Phinx](https://book.cakephp.org/phinx/) to manage database schema changes.
+
+Create a new migration:
+
+```
+cd backend
+vendor/bin/phinx create MyMigration
+```
+
+Run pending migrations:
+
+```
+cd backend
+composer migrate
+```
