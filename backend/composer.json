@@ -1,0 +1,22 @@
+{
+    "name": "egork/backend",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Egork\\Backend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yehor",
+            "email": "egorkorsungit@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "4.12",
+        "slim/psr7": "^1.7",
+        "illuminate/database": "^12.21",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

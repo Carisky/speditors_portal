@@ -1,0 +1,29 @@
+# Node.js
+/frontend/node_modules/
+frontend/.next/
+frontend/.turbo/
+frontend/.env*
+frontend/npm-debug.log*
+frontend/yarn.lock
+frontend/pnpm-lock.yaml
+
+# PHP
+/backend/vendor/
+backend/.env
+backend/storage/
+backend/.phpunit.result.cache
+
+# Common IDE/editor files
+*.log
+*.lock
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+ehthumbs.db
+Icon?
+desktop.ini
