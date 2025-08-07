@@ -35,5 +35,18 @@ services:
       - db_data:/var/lib/mysql
     ports:
       - "3306:3306"
+  workbench:
+    image: lscr.io/linuxserver/mysql-workbench:latest
+    environment:
+      PUID: 1000
+      PGID: 1000
+      TZ: UTC
+    volumes:
+      - workbench_config:/config
+    ports:
+      - "3001:3001"
+    depends_on:
+      - db
 volumes:
   db_data:
+  workbench_config:
